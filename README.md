@@ -37,4 +37,4 @@ Para usar la aplicación, abre tu navegador y accede a http://localhost/small-bu
 
 ## Créditos
 
-Desarrollado por jn4varro (https://github.com/tu-usuario). Gracias a todos los que me han apoyado y brindado feedback durante el desarrollo de esta aplicación. 🙏
+Desarrollado por jn4varro (https://github.com/jn4varro). Gracias a todos los que me han apoyado y brindado feedback durante el desarrollo de esta aplicación. 🙏
