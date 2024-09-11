@@ -1,0 +1,102 @@
+@font-face {
+    font-family: love;
+    src: url('../fonts/Love.ttf');
+}
+
+
+
+
+
+.container {
+    display: flex;  
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    border-radius: 30px;
+    width:auto;
+    
+}
+
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: love;
+    color: rgb(17, 18, 12) ;
+}
+
+p {
+    font-size:40px;
+    text-align: center;
+    margin-top: -40px;
+    font-family:love;
+    color: rgb(17, 18, 12) ;
+    font-weight: bold;
+    color: rgb(17, 18, 12);
+    
+}
+
+.tienda{
+    color: rgb(135, 90, 133);
+}
+
+.nicolas{
+    color: rgb(101, 183, 145);
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    border: none;
+}
+
+a:visited {
+    color: inherit; 
+}
+
+#menu{
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: inline-flex;  
+    text-align: center;
+    list-style-type: none; /* Quita los puntos de la lista desordenada */
+    padding-left: 0; /* Elimina el padding por defecto del navegador */
+    gap: 100px;
+    margin-top: -3%;
+}
+
+li{
+    font-size: 18px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+   
+    
+}
+
+
+li:hover{
+    transform:scale(1.4);
+    
+    transition: 0.2s;
+}
+.margen{
+    margin-left: 350px;
+}
+
+#hr{
+    margin-right:500px;
+}
+#total{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#resto{
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consulta por categoría</title>
+    <style>
+        b{
+            font-size:20px;
+        }
+        strong{
+            font-size:30px;
+            color:green;
+        }
+        #buscarCategoria{
+            margin-left:600px;
+        }
+        #resultado{
+            margin-left:600px;
+        }
+    </style>
+</head>
+<body>
+    <a href="consulta.html">
+        <button> Volver</button>
+    </a>    
+    <br><br>
+    <form id="buscarCategoria">
+        <label for="categoria">Categoría</label>
+        <select name="categoria" id="categoria" required>
+            <option value="Todo">Todo</option>
+            <option value="Regalos">Regalos</option>
+            <option value="Drogueria">Droguería</option>
+            <option value="Papeleria">Papelería</option>
+            <option value="Juguetes">Juguetes</option>
+            <option value="Comestibles">Comestibles</option>
+            <option value="Joyas_Plata">Joyas Plata</option>
+            <option value="Fotos">Fotos</option>
+            <option value="Otros">Otros</option>
+        </select>
+        <br><br>
+        <label for="fechaInicio">Fecha de inicio:</label>
+        <input type="date" name="fechaInicio" id="fechaInicio">
+        <br><br>
+        <label for="fechaFin">Fecha de fin:</label>
+        <input type="date" name="fechaFin" id="fechaFin">
+        <br><br>
+        <button type="submit" value="Consultar">Consultar</button>
+    </form>
+
+    <br><br>
+    <div id="resultado"></div>
+
+    <script type="text/javascript" src="js/categoria.js"></script>
+
+</body>
+</html>

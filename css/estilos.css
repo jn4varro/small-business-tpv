@@ -1,0 +1,112 @@
+@font-face {
+    font-family: love;
+    src: url('../fonts/Love.ttf');
+}
+
+
+
+
+
+.container {
+    display: flex;  
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    border-radius: 30px;
+    width:auto;
+    
+}
+
+hr{
+    height: 5px;
+    border: none;
+    background-color: rgb(101, 183, 145);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: love;
+    color: rgb(17, 18, 12) ;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 0px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    color: rgb(17, 18, 12) ;
+    
+    
+}
+
+p {
+    font-size:60px;
+    text-align: center;
+    margin-top: -40px;
+    font-family:love;
+    color: rgb(17, 18, 12) ;
+    font-weight: bold;
+    color: rgb(17, 18, 12);
+    
+}
+
+.tienda{
+    color: rgb(135, 90, 133);
+}
+
+.nicolas{
+    color: rgb(101, 183, 145);
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    border: none;
+}
+
+a:visited {
+    color: inherit; 
+}
+
+#menu{
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: inline-flex;  
+    text-align: center;
+    list-style-type: none; 
+    padding-left: 0; 
+    gap: 100px;
+    margin-top: -3%;
+}
+
+li{
+    font-size: 18px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+   
+    
+}
+
+
+li:hover{
+    transform:scale(1.6);
+    
+    transition: 0.2s;
+}
+
+#busqueda {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.vertical{
+    display:table-row;
+}

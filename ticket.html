@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket de Venta</title>
+    <style>
+        @font-face {
+        font-family: love;
+        src: url('fonts/Love.ttf');
+        }
+
+        body { font-family: Arial, sans-serif; font-size: 10px; }
+        .ticket { width: 300px; margin: 0 auto; }
+        .header img { max-width: 100px; }
+        .details { margin-top: 20px; }
+        .details table { width: 100%; border-collapse: collapse; }
+        .details th, .details td { border: 1px solid #000; padding: 5px; text-align: left; }
+        .footer { margin-top: 20px; }
+
+
+        #regalos-container{
+            margin-left: px;
+           
+            
+        }
+        #regalos{
+            font-family:love;
+            font-size:20px;
+            font-weight: bold;
+            
+        }
+        #nya{
+            margin-top: -18px;
+            font-weight: bold;
+            font-family:love;
+            font-size:18px;
+        }
+        #direccion{
+            margin-left:18px;
+        }
+        #cp{
+            margin-top:-8px;
+        }
+        td {
+            padding: 10px;
+        }
+        span{
+            margin-left: 15px;
+        }
+        #totalTicket{
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        #print{
+            margin-left:590px;
+        }
+
+        /* Reglas para impresión */
+        @media print {
+            #print { display: none; } /* Oculta el botón al imprimir */
+            #nuevaVenta { display: none; }
+            .ticket { width: 58mm; } /* Ajusta el ancho al tamaño típico de una impresora de tickets */
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket">
+        <div class="header">
+            <div id="regalos-container">
+                <p id="regalos">o REGALOS o</p>
+            </div>
+                <p id="nya">NICOLAS Y ANA</p>
+                <p>--------------------------------------</p>
+                <div id="direccion">
+                <p>NIF: 12345678A</p>
+                <p>Paseo Alameda 46</p>
+                <p id="cp">23310 Mogón(Jaén)</p>
+            </div>
+            <p>--------------------------------------</p>
+            <br>
+        </div>
+        <div class="">
+            <table>
+                <tr>
+                    <th>Cantidad</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                </tr>
+            </table>
+
+            <table  id="tabla-ticket" >
+
+            </table>
+            <p>--------------------------------------</p>
+            <p id="totalTicket"> </p>
+
+
+        </div>
+        <div class="footer">
+            <p id="idVentaTicket"></p>
+            <p id="metodoPagoTicket"></p>
+            <p id="fechaTicket"></p>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    <button id="print">PRINT</button>
+    
+    <a href="venta.html">
+        <button id="nuevaVenta"> NUEVA VENTA</button>
+    </a>   
+  
+    <script type="text/javascript" src="./js/finalizarVenta.js" defer></script>
+    <script>
+        const btn = document.getElementById("print");
+        const nuevaVenta = document.getElementById('nuevaVenta');
+
+        btn.addEventListener("click", function(){
+            window.print();
+        });
+
+        nuevaVenta.addEventListener("click", function(){
+            window.close();
+        });
+
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Escuchar el mensaje desde la ventana original
+    window.addEventListener('message', (event) => {
+        const datos = event.data;
+        crearTicket(datos);
+    });
+
+    function crearTicket(result) {
+        const tablaTicket = document.getElementById('tabla-ticket');
+        const idVentaElement = document.getElementById('idVentaTicket');
+        const metodoPagoElement = document.getElementById('metodoPagoTicket');
+        const fechaElement = document.getElementById('fechaTicket');
+        const totalElement = document.getElementById('totalTicket');
+
+        const productos = result.data;
+        const primeraVenta = productos[0];
+
+        totalElement.innerHTML = `TOTAL: <span>${primeraVenta.total}</span>`;
+        idVentaElement.innerHTML = `ID VENTA: ${primeraVenta.id}`;
+        metodoPagoElement.innerHTML = `MÉTODO PAGO: ${primeraVenta.metodo_pago}`;
+        fechaElement.innerHTML = `FECHA: ${primeraVenta.fecha_creacion}`;
+
+        tablaTicket.innerHTML = '';
+
+        productos.forEach(producto => {
+            const nuevoProducto = document.createElement('tr');
+            nuevoProducto.innerHTML = `
+                <td>${producto.cantidad}</td>
+                <td>${producto.categoria}</td>
+                <td>${producto.precio}</td>
+            `;
+            tablaTicket.appendChild(nuevoProducto);    
+        });
+       
+        
+    }
+});    
+</script>
+
+
+</body>
+</html>

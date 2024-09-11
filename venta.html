@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilosVenta.css">
+    <title>TPV VENTA</title>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="tienda">Tienda</span> de Regalos</h1>
+        <p>Ana y <span class="nicolas">Nicolás</span></p>
+    </div>
+    <hr>
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="venta.html">Venta</a></li>
+            <li><a href="consulta.html">Consultas</a></li>
+        </ul>
+    </nav>
+
+    <div class="margen" id="articulos">
+        <label for="cantidad">Cantidad</label>
+        <input type="number" name="cantidad" value="1" id="cantidad" required>
+    
+        <label for="categoria">Categoría</label>
+        <select name="categoria" id="categoria" required>
+            <option value="Regalos">Regalos</option>
+            <option value="Drogueria">Drogueria</option>
+            <option value="Papeleria">Papelería</option>
+            <option value="Juguetes">Juguetes</option>
+            <option value="Comestibles">Comestibles</option>
+            <option value="Joyas_Plata">Joyas Plata</option>
+            <option value="Fotos">Fotos</option>
+            <option value="Otros">Otros</option>
+        </select>
+    
+        <label for="precio">Precio</label>
+        <input type="number" name="precio" id="precio" step="0.01" value="0.00" required>
+    
+        <button type="button" id="anadir" >Añadir</button>
+    </div>
+    
+    <div class="margen" id="lista-productos">
+        <!--aqui se muestra de los productos anadidos -->
+        <table id="tabla-productos">
+           <!-- <tr>
+                <th>Cantidad</th>
+                <th>Categoria</th>
+                <th>Precio</th>
+            </tr> -->   
+        </table> 
+        <hr id="hr">
+        <div id="total"></div>
+        <br>
+        <br>
+        
+        <!--efectivo o tarjeta-->
+        <label for="pago">Método de pago: </label>
+        <select name="pago" id="pago" required>
+            <option value="efectivo">Efectivo</option>
+            <option value="tarjeta">Tarjeta</option>
+        </select>
+        <br/>
+        <br/>
+        <!--Devolucion cambio-->
+        <label for="entrega">Entrega: </label>
+        <input type="number" name="entrega" id="entrega" step="0.01" value="0.00" required>
+        <button type="cambio" id="cambio" >Resto</button>
+        <br>
+        <br>
+        <div id="resto"></div>
+        <br/>
+        <br/>   
+        <button type="button" id="finCompra">Finalizar Venta</button>
+       
+    </div>
+    
+    
+    <script type="text/javascript" src="js/anadir.js"></script>
+    <script type="text/javascript" src="js/products.js"></script>
+    <script src="./js/finalizarVenta.js?v=1.0" defer></script>
+
+</body>
+</body>
+</html>
