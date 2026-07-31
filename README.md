@@ -1,6 +1,7 @@
-# TPV para Pequeños Comercios
+# TPV para Pequeños Comercios, mi Reliquia personal
 
-¡Hola! Este es mi primer proyecto TPV desarrollado para pequeños comercios. La aplicación permite registrar ventas de manera dinámica, almacenarlas en una base de datos y consultar las ventas totales por categorías y fechas.
+¡Hola! Este fue mi primer proyecto: un TPV desarrollado para la tienda de mi familia. Construido desde cero, a puro php + js + MySql, sin frameworks, sin idea de lo que estaba haciendo. 
+Lo mantengo aqui para recordar mi punto de partida. De aqui nació todo lo demás.
 
 ## Descripción
 
